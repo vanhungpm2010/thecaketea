@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Nguyễn Văn Hùng",
+        "address": "Thanh đa, Bình thạnh, HCM",
+        "phone": "123456",
+        "email": "vanhung@gmail.com",
+        "birtday": "1997-10-13",
+        "gender": true
+    },
+    {
+        "name": "Lê Phạm Đăng Khoa",
+        "address": "Thủ Đức, HCM",
+        "phone": "123456",
+        "email": "khoale@gmail.com",
+        "birtday": "1998-01-01",
+        "gender": true
+    }
+]
