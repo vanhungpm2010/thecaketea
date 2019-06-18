@@ -47,7 +47,7 @@ export class ChildBlog extends Component{
         })
         
       }
-    handleSubmit2 = async(event)=>{
+    handleSubmit2 = (event)=>{
         event.preventDefault();
         var formData = new FormData();
         if(this.state.files[0])
@@ -57,7 +57,7 @@ export class ChildBlog extends Component{
         formData.append('content',event.target.content.value);
         formData.append('author',event.target.author.value);
 
-        await axios.post('/api/blogs/add', formData)
+        axios.post('/api/blogs/add', formData)
             .then(res => {
                 this.props.callBack(res.data);
             })

@@ -18,8 +18,8 @@ class Products extends Component{
         }
     }
     
-    getProducts = async() =>{
-        await axios.get('/api/products')
+    getProducts = () =>{
+        axios.get('/api/products')
             .then(result =>{
                 this.setState({ products: result.data })
             });
@@ -94,8 +94,8 @@ class Products extends Component{
         });
     }
     
-    sendIdtoModal = async(id) =>{
-        await fetch('/api/products/get/' + id,{
+    sendIdtoModal = (id) =>{
+        fetch('/api/products/get/' + id,{
             method:'get',
             headers: { 'Content-Type': 'application/json'}
         })

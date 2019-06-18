@@ -26,7 +26,7 @@ export default class Modal_Prod extends Component {
         };
     }
     
-    handleSubmit = async(event) => {
+    handleSubmit = (event) => {
        
         event.preventDefault();
         var formData = new FormData();
@@ -38,7 +38,7 @@ export default class Modal_Prod extends Component {
         formData.append('image',event.target.image.files[0]);
         
         var mess = '';
-        await axios.put('/api/products/', formData)
+        axios.put('/api/products/', formData)
         .then((result) => {
             mess= result.data;
         });
@@ -46,7 +46,7 @@ export default class Modal_Prod extends Component {
         // this.props.callBack();
         // this.setState({ ...initialState });
     }
-    handleAdd = async(event) =>{
+    handleAdd = (event) =>{
         event.preventDefault();
 
         var formData = new FormData();
@@ -58,7 +58,7 @@ export default class Modal_Prod extends Component {
         formData.append('image',event.target.image.files[0]);
         
         var mess ='';
-        await axios.post('/api/products/', formData)
+        axios.post('/api/products/', formData)
         .then(result => {
             mess = result.data;
         });
@@ -83,8 +83,8 @@ export default class Modal_Prod extends Component {
     getIdType = (event) => {
         this.setState({typeId: event.target.value , chooseType: 'two'});
     }
-    async componentDidMount(){
-        await fetch('/api/products/getType', {
+    componentDidMount(){
+        fetch('/api/products/getType', {
             method: 'get',
             headers:{ 'Content-Type': 'application/json' }
         })
