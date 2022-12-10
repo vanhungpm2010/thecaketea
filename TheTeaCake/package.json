@@ -15,7 +15,7 @@
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
     "connect-flash": "^0.1.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-session": "^1.16.1",
     "formik": "^1.5.7",
     "jsonwebtoken": "^8.5.1",
